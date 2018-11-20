@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Peepz</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Peepz!</h1>
+
+    <h2>People under 18 years old</h2>
+    <div id="under-age"></div>
+    <h2>People with the same age</h2>
+    <div id="same-age"></div>
+    <h2>Original people</h2>
+    <pre id="original"></pre>
+    <script>
+      const peepz = [
+        {
+          name: 'Luis',
+          age: 25,
+        },
+        {
+          name: 'Osuna',
+          age: 29,
+        },
+        {
+          name: 'Diego',
+          age: 17,
+        },
+        {
+          name: 'Tulio',
+          age: 31,
+        },
+        {
+          name: 'William',
+          age: 31,
+        },
+      ];
+
+      function getPeopleUnderAge(people) {}
+
+      function getPeopleWithTheSameAge(people) {}
+
+      // This array should print only the names of the people under 18 years old.
+      showResults('under-age', getPeopleUnderAge(peepz));
+      // This array should print only the names of the people with the same age.
+      showResults('same-age', getPeopleWithTheSameAge(peepz));
+      // This array should print the same data that it had before.
+      document.getElementById('original').innerText = JSON.stringify(peepz);
+
+      function showResults(divId, results) {
+        if (!results) return;
+
+        let fragment = document.createDocumentFragment();
+        for (result of results) {
+          let parragraph = document.createElement('p');
+          parragraph.innerText = result;
+
+          fragment.appendChild(parragraph);
+        }
+
+        document.getElementById(divId).appendChild(fragment);
+      }
+    </script>
+  </body>
+</html>
