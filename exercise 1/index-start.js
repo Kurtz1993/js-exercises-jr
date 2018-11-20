@@ -25,7 +25,15 @@ function getPeopleUnderAge(people) {
 
 }
 
-// This array should print only the names of the people under 18 years old, as an array of strings.
+function getPeopleWithTheSameAge(people) {
+
+}
+
+// This array should print only the names of the people under 18 years old.
 console.log(getPeopleUnderAge(peepz));
+// This array should print the same data that it had before.
+console.table(peepz);
+// This array should print only the names of the people with the same age.
+console.table(getPeopleWithTheSameAge(peepz));
 // This array should print the same data that it had before.
 console.table(peepz);
