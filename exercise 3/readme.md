@@ -4,7 +4,8 @@
 Show an alert per button clicked, but only use one event.
 
 ### Acceptance criteria
-- All buttons should respond to the click event, but, only one event handler must be present. This means that you cannot have something like:
+- The only event handler should be on the element div#buttons.
+- All buttons should respond to the click event. This means that you cannot have something like:
 
 ```javascript
 const btn1 = document.getElementById('btn1').onclick = somefunction();
